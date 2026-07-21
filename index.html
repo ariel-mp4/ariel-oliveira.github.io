@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ariel Oliveira — Design Gráfico</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <style>
+    :root { --paper:#000000; --ink:#f5f2ea; --blue:#7588ff; --lime:#d9f43a; --coral:#ff765b; --line:rgba(245,242,234,.24); }
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:Manrope,Arial,sans-serif;overflow-x:hidden} a{color:inherit;text-decoration:none}
+    .wrap{max-width:1440px;margin:auto;padding:0 32px}.eyebrow{font:12px 'DM Mono',monospace;letter-spacing:.08em;text-transform:uppercase}
+    nav{height:82px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}.brand{font-weight:800;line-height:.9;font-size:18px}.navlinks{display:flex;gap:26px;font-size:13px;font-weight:700}.navlinks a:hover{color:var(--blue)}
+    .hero{min-height:calc(100vh - 82px);position:relative;padding:6vh 0;display:grid;grid-template-columns:1.05fr .95fr;align-items:start;gap:40px;border-bottom:1px solid var(--line)}.hero>div:first-child,.hero>div:last-child{align-self:start;padding-top:5vh}.hero>div:last-child{padding-top:calc(5vh + 38px)}.hero h1{font-size:clamp(46px,6.7vw,104px);line-height:.88;letter-spacing:-.08em;margin:20px 0 0;font-weight:800;max-width:760px}.hero h1 em{font-family:'Playfair Display',serif;font-weight:700;letter-spacing:-.06em;color:transparent;-webkit-text-stroke:1.5px var(--ink);text-stroke:1.5px var(--ink)}.hero-note{font-size:15px;line-height:1.55;max-width:410px;margin:28px 0 0}.hero-art{height:min(45vw,515px);min-height:350px;position:relative;overflow:hidden;background:#000}.hero-art img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
+    .hero-art .disc{position:absolute;width:68%;aspect-ratio:1;border-radius:50%;background:var(--lime);top:7%;right:-10%}.hero-art .circle{position:absolute;width:38%;aspect-ratio:1;border-radius:50%;border:22px solid var(--coral);bottom:10%;left:12%}.hero-art .slash{position:absolute;width:125%;height:21%;background:var(--ink);transform:rotate(-34deg);top:44%;left:-16%}.hero-art .type{position:absolute;bottom:-9%;right:2%;font-size:clamp(110px,17vw,245px);font-weight:800;line-height:.8;letter-spacing:-.15em;color:#fff;mix-blend-mode:screen}.hero-art:after{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(0,0,0,.5) 1px,transparent 1px);background-size:6px 6px;mix-blend-mode:soft-light;opacity:.38}
+    .intro{padding:150px 0;display:grid;grid-template-columns:1fr 2fr;gap:24px}.intro p{font-size:clamp(28px,4vw,56px);letter-spacing:-.055em;line-height:1.1;margin:0;max-width:950px;font-weight:600}.intro span{font-family:'Playfair Display',serif;font-style:italic;color:var(--blue)}
+    .projects-head{display:flex;align-items:end;justify-content:space-between;border-bottom:1px solid var(--ink);padding-bottom:14px}.projects-head h2{font-size:44px;letter-spacing:-.07em;margin:0}.projects{padding-bottom:144px}.discipline{padding-top:58px}.discipline-title{display:flex;gap:17px;align-items:baseline;margin-bottom:18px}.discipline-title b{font:12px 'DM Mono';color:var(--lime)}.discipline-title h3{font-size:24px;letter-spacing:-.05em;margin:0}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:42px 24px;margin-top:28px}.project{display:block}.cover{height:clamp(270px,38vw,505px);position:relative;overflow:hidden;background:#202020;transition:transform .35s ease}.cover img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .5s ease}.project:hover .cover{transform:scale(.985)}.project:hover .cover img{object-fit:contain;transform:scale(1)}.meta{display:flex;justify-content:space-between;padding-top:11px;font-size:13px;font-weight:700}.meta span:last-child{font:11px 'DM Mono',monospace;text-transform:uppercase}
+    .c1{background:var(--coral)}.c1:before{content:'SOM';position:absolute;color:var(--ink);font-size:clamp(75px,12vw,170px);font-weight:800;letter-spacing:-.13em;bottom:8%;left:4%;transform:rotate(-8deg)}.c1:after{content:'';position:absolute;width:150px;height:150px;border:18px solid var(--lime);border-radius:50%;right:10%;top:14%}
+    .c2{background:var(--ink)}.c2:before{content:'↗';font-size:clamp(250px,32vw,500px);color:var(--blue);line-height:.7;position:absolute;left:4%;top:11%}.c2:after{content:'NORTE';font:clamp(20px,3vw,42px) 'DM Mono';color:var(--paper);position:absolute;right:7%;bottom:9%;writing-mode:vertical-rl}
+    .c3{background:linear-gradient(135deg,#b9f0ff,#624cf4 48%,#1b1455)}.c3:before{content:'';position:absolute;width:48%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 28%,#fff 0 4%,#ffc6fb 8%,#ff4caa 30%,#4d19d7 68%,#17112f 72%);left:13%;top:15%;box-shadow:115px 138px 0 -18px #9dfff8, 218px 30px 0 -34px #fff;filter:drop-shadow(12px 20px 10px rgba(0,0,0,.3))}.c3:after{content:'FORMA\A FLUIDA';white-space:pre;position:absolute;color:#fff;font:12px 'DM Mono';letter-spacing:.15em;right:8%;bottom:9%}
+    .c4{background:var(--blue)}.c4:before{content:'M';color:#fff;font:italic clamp(250px,39vw,550px)/.7 'Playfair Display';position:absolute;left:10%;bottom:8%}.c4:after{content:'';position:absolute;width:55%;height:15%;background:var(--coral);transform:rotate(-34deg);right:-5%;top:26%}
+    .c5{background:#f0ded1}.c5:before{content:'NOVA';font:800 clamp(80px,13vw,180px)/.8 Manrope;color:#1c1b1c;letter-spacing:-.14em;position:absolute;left:6%;top:14%}.c5:after{content:'';position:absolute;width:35%;aspect-ratio:1;background:var(--coral);border-radius:50% 50% 0 50%;right:12%;bottom:8%;transform:rotate(24deg)}
+    .c6{background:#2d243e}.c6:before{content:'◒';font-size:clamp(260px,36vw,510px);color:var(--lime);line-height:.8;position:absolute;left:5%;top:11%}.c6:after{content:'ESTÚDIO\AURORA';white-space:pre;position:absolute;right:8%;bottom:10%;font:14px 'DM Mono';color:#fff}
+    .about{background:var(--ink);color:var(--paper);padding:118px 0}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:25px}.about h2{font-size:clamp(48px,7vw,100px);letter-spacing:-.08em;line-height:.86;margin:0}.about p{font-size:20px;line-height:1.45;max-width:480px;margin:8px 0 42px}.tags{display:flex;flex-wrap:wrap;gap:8px}.tag{border:1px solid rgba(245,242,234,.5);padding:9px 11px;border-radius:20px;font:11px 'DM Mono'}main > .projects + .about{display:none}.about-final{display:block!important}
+    footer{padding:32px 0 38px;background:var(--lime)}footer .eyebrow{font-size:14px;font-weight:700}.contact{font-size:clamp(38px,6vw,84px);letter-spacing:-.08em;font-weight:700;line-height:1;margin:44px 0 72px;display:inline-block;border-bottom:4px solid var(--ink)}.contact:hover{color:var(--blue)}.foot-row{display:flex;justify-content:space-between;font:14px 'DM Mono';text-transform:uppercase}
+    @media(max-width:700px){.wrap{padding:0 18px}.navlinks{gap:14px;font-size:11px}.hero{grid-template-columns:1fr;padding-top:44px}.hero-note{margin:26px 0 0}.hero-art{height:80vw;min-height:0}.intro{padding:88px 0;grid-template-columns:1fr;gap:20px}.grid{grid-template-columns:1fr;gap:30px}.projects{padding-bottom:85px}.about{padding:82px 0}.about-grid{grid-template-columns:1fr}.foot-row{gap:18px;flex-wrap:wrap}.contact{margin:38px 0 64px}.cover{height:88vw}}
+    .hero{overflow:hidden;isolation:isolate}.hero>div{position:relative;z-index:1}.hero-shader{position:absolute;inset:-12%;width:124%;height:124%;z-index:0;pointer-events:none;opacity:.5;mix-blend-mode:screen}
+    main > .wrap.hero{width:100%;max-width:none;margin:0;padding:0 32px;min-height:calc(100vh - 82px);grid-template-columns:1fr;justify-items:center;text-align:center}.hero>div:first-child{width:min(100%,880px);padding-top:0;align-self:center;transform:translateY(9vh)}.hero>div:last-child{display:none}.hero-note{margin:28px auto 0}.hero-shader{inset:0;width:100%;height:100%;opacity:.64}
+    .discipline .cover img,#personagem .cover img{transform:scale(var(--scroll-zoom,1));will-change:transform}@media (prefers-reduced-motion:reduce){.discipline .cover img,#personagem .cover img{transform:none!important}}
+  </style>
+</head>
+<body>
+  <header class="wrap"><nav><a class="brand" href="#top">ARIEL<br>OLIVEIRA</a><div class="navlinks"><a href="#trabalhos">Trabalhos / Work</a><a href="#sobre">Sobre / About</a><a href="#contato">Contato / Contact</a></div><span class="eyebrow">Uberlândia, MG · Brasil</span></nav></header>
+  <main id="top">
+    <section class="wrap hero"><div><span class="eyebrow">Identidade · Pôsteres · Ilustração · 3D</span><h1>Minimalismo<br>Autêntico<br><em>Precisão Absoluta.</em><br>Nada em Excesso.</h1><p class="hero-note">Crio soluções visuais que comunicam com clareza e deixam uma impressão duradoura.<br><br><i>I create visual solutions that communicate clearly and leave a lasting impression.</i></p></div><div><div class="hero-art"><img src="assets/hero-minimalismo.jpg" alt="Símbolo minimalista branco" fetchpriority="high"></div></div></section>
+    <section class="wrap intro"><span class="eyebrow">01 — Olá / Hello</span><p>Olá, eu sou Ariel Oliveira. Designer gráfico apaixonado por criar identidades visuais, pôsteres, ilustrações e projetos 3D que unem criatividade, técnica e atenção aos <span>detalhes.</span><br><br><small><i>Hello, I’m Ariel Oliveira, a graphic designer passionate about creating visual identities, posters, illustrations, and 3D projects that combine creativity, technique, and attention to detail.</i></small></p></section>
+    <section class="wrap projects" id="trabalhos"><div class="projects-head"><h2>Trabalhos selecionados</h2><span class="eyebrow">2022—2026</span></div><div class="discipline"><div class="discipline-title"><b>01</b><h3>Design de pôster / Poster design</h3></div><div class="grid">
+      <a class="project" href="#contato"><div class="cover"><img src="assets/dread.jpg" alt="Pôster Dread" loading="lazy"></div><div class="meta"><span>Dread</span><span>Pôster / Poster</span></div></a>
+      <a class="project" href="#contato"><div class="cover"><img src="assets/love.png" alt="Pôster Love" loading="lazy"></div><div class="meta"><span>Love</span><span>Pôster / Poster</span></div></a>
+      <a class="project" href="#contato"><div class="cover"><img src="assets/knight.png" alt="Pôster Knight" loading="lazy"></div><div class="meta"><span>Knight</span><span>Pôster / Poster</span></div></a>
+      <a class="project" href="#contato"><div class="cover"><img src="assets/motion.jpg" alt="Pôster Motion" loading="lazy"></div><div class="meta"><span>Motion</span><span>Pôster / Poster</span></div></a>
+      <a class="project" href="#contato"><div class="cover"><img src="assets/bad-pattern.jpg" alt="Pôster Bad Pattern" loading="lazy"></div><div class="meta"><span>Bad Pattern</span><span>Pôster / Poster</span></div></a>
+      <a class="project" href="#contato"><div class="cover"><img src="assets/ghost.jpg" alt="Pôster Ghost" loading="lazy"></div><div class="meta"><span>Ghost</span><span>Pôster / Poster</span></div></a>
+      <a class="project" href="#contato"><div class="cover"><img src="assets/decay.jpg" alt="Pôster Decay" loading="lazy"></div><div class="meta"><span>Decay</span><span>Pôster / Poster</span></div></a>
+    </div></div><div class="discipline"><div class="discipline-title"><b>02</b><h3>Design 3D / 3D Design</h3></div><div class="grid"><a class="project" href="#contato"><div class="cover"><img src="assets/irri.jpg" alt="Retrato 3D Irri" loading="lazy"></div><div class="meta"><span>Irri</span><span>3D Art</span></div></a><a class="project" href="#contato"><div class="cover"><img src="assets/tapes.jpg" alt="Composição 3D Tapes" loading="lazy"></div><div class="meta"><span>Tapes</span><span>3D Art</span></div></a><a class="project" href="#contato"><div class="cover"><img src="assets/autumn-3d.jpg" alt="Arte 3D Autumn" loading="lazy"></div><div class="meta"><span>Autumn</span><span>3D Art</span></div></a><a class="project" href="#contato"><div class="cover"><img src="assets/weel.jpg" alt="Roda 3D Weel" loading="lazy"></div><div class="meta"><span>Weel</span><span>3D Art</span></div></a><a class="project" href="#contato"><div class="cover"><img src="assets/stone-queen.jpg" alt="Arte 3D Stone Queen" loading="lazy"></div><div class="meta"><span>Stone Queen</span><span>3D Art</span></div></a><a class="project" href="#contato"><div class="cover"><img src="assets/mars-on-the-hand.png" alt="Arte 3D Mars on the Hand" loading="lazy"></div><div class="meta"><span>Mars on the Hand</span><span>3D Art</span></div></a><a class="project" href="#contato"><div class="cover"><img src="assets/white-back.jpg" alt="Arte 3D White Back" loading="lazy"></div><div class="meta"><span>White Back</span><span>3D Art</span></div></a></div></div><div class="discipline"><div class="discipline-title"><b>03</b><h3>Identidade visual / Visual identity</h3></div><div class="grid"><a class="project" href="#contato"><div class="cover"><img src="assets/atories.png" alt="Identidade visual Anti Studios" loading="lazy"></div><div class="meta"><span>Anti Studios — Primeiro Drop</span><span>Identidade / Identity</span></div></a><a class="project" href="#contato"><div class="cover"><img src="assets/galaxia-21.png" alt="Embalagem Galaxia 21" loading="lazy"></div><div class="meta"><span>Galaxia 21</span><span>Identidade / Identity</span></div></a></div></div></section>
+    <section class="about" id="sobre"><div class="wrap about-grid"><h2>Clareza<br>com <em>atitude.</em></h2><div><p>Meu objetivo é desenvolver soluções visuais com personalidade, unindo estratégia e experimentação para que cada projeto encontre a sua própria voz.<br><br><i>My goal is to develop distinctive visual solutions, balancing strategy and experimentation so every project finds its own voice.</i></p><div class="tags"><span class="tag">Identidade visual</span><span class="tag">Visual identity</span><span class="tag">Pôsteres</span><span class="tag">Illustration</span><span class="tag">3D design</span></div></div></div></section>
+    <section class="wrap projects" id="personagem"><div class="projects-head"><h2>Design de personagem / Character design</h2><span class="eyebrow">04</span></div><div class="grid"><a class="project" href="#contato"><div class="cover"><img src="assets/obo-expressoes.jpg" alt="Expressões do personagem Obo" loading="lazy"></div><div class="meta"><span>Obo — Expressões</span><span>Character design</span></div></a><a class="project" href="#contato"><div class="cover"><img src="assets/obo-guia.jpg" alt="Guia visual do personagem Obo" loading="lazy"></div><div class="meta"><span>Obo — Guia visual</span><span>Character design</span></div></a></div></section>
+  </main>
+  <footer id="contato"><div class="wrap"><span class="eyebrow">Vamos criar algo memorável? / Let’s create something memorable.</span><a class="contact" href="mailto:ariel_design@outlook.com">ariel_design@outlook.com ↗</a><div class="foot-row"><span>© Ariel Oliveira 2026 · <a href="tel:+5534984140317">+55 34 98414-0317</a></span><span><a href="https://www.instagram.com/anti.designx/" target="_blank" rel="noopener">Instagram @anti.designx ↗</a></span></div></div></footer>
+  <script>
+    (() => {
+      const hero = document.querySelector('.hero');
+      if (!hero) return;
+      const canvas = document.createElement('canvas');
+      canvas.className = 'hero-shader';
+      canvas.setAttribute('aria-hidden', 'true');
+      hero.prepend(canvas);
+      const gl = canvas.getContext('webgl', { alpha: true });
+      if (!gl) return;
+      const vertex = 'attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}';
+      const fragment = 'precision highp float;uniform vec2 resolution;uniform float time;void main(){vec2 uv=(gl_FragCoord.xy*2.0-resolution.xy)/min(resolution.x,resolution.y);float t=time*0.05;float lineWidth=0.002;vec3 color=vec3(0.0);for(int j=0;j<3;j++){for(int i=0;i<5;i++){color[j]+=lineWidth*float(i*i)/abs(fract(t-0.01*float(j)+float(i)*0.01)*5.0-length(uv)+mod(uv.x+uv.y,0.2));}}gl_FragColor=vec4(color[0],color[1],color[2],1.0);}';
+      function shader(type, source) { const s=gl.createShader(type); gl.shaderSource(s,source); gl.compileShader(s); return s; }
+      const program = gl.createProgram(); gl.attachShader(program, shader(gl.VERTEX_SHADER, vertex)); gl.attachShader(program, shader(gl.FRAGMENT_SHADER, fragment)); gl.linkProgram(program); gl.useProgram(program);
+      const buffer = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, buffer); gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1,1,-1,-1,1,-1,1,1,-1,1,1]), gl.STATIC_DRAW);
+      const attribute = gl.getAttribLocation(program, 'a'); gl.enableVertexAttribArray(attribute); gl.vertexAttribPointer(attribute,2,gl.FLOAT,false,0,0);
+      const resolution = gl.getUniformLocation(program, 'resolution'); const time = gl.getUniformLocation(program, 'time');
+      function render(now) { const d=Math.min(devicePixelRatio||1,2), w=canvas.clientWidth*d, h=canvas.clientHeight*d; if(canvas.width!==w||canvas.height!==h){canvas.width=w;canvas.height=h;gl.viewport(0,0,w,h);} gl.uniform2f(resolution,w,h);gl.uniform1f(time,now*.003);gl.drawArrays(gl.TRIANGLES,0,6);requestAnimationFrame(render); }
+      requestAnimationFrame(render);
+    })();
+  </script>
+  <script>
+    (() => {
+      const images = [...document.querySelectorAll('.discipline .project .cover img, #personagem .project .cover img')];
+      if (!images.length || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      let pending = false;
+      function updateZoom() {
+        const focus = innerHeight * .52;
+        images.forEach((image) => {
+          const box = image.getBoundingClientRect();
+          const distance = Math.abs((box.top + box.height / 2) - focus) / (innerHeight * .8);
+          const progress = Math.max(0, 1 - Math.min(1, distance));
+          image.style.setProperty('--scroll-zoom', (1 + progress * .18).toFixed(3));
+        });
+        pending = false;
+      }
+      function requestUpdate() { if (!pending) { pending = true; requestAnimationFrame(updateZoom); } }
+      addEventListener('scroll', requestUpdate, { passive: true });
+      addEventListener('resize', requestUpdate);
+      requestUpdate();
+    })();
+  </script>
+</body>
+</html>
